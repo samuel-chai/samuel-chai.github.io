@@ -59,5 +59,5 @@ Languages      Python · C/C++ · C# · MATLAB
 ## 📫 Get in Touch
 
 - 📧 ccs95209@email.com
-- 🔗 [LinkedIn](www.linkedin.com/in/yu-shen-chai)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/yu-shen-chai)
 - 📍 Hong Kong / Taiwan
