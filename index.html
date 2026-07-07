@@ -154,7 +154,7 @@
       <span class="chip">RK3588S · Intel N150 SoM</span>
       <span class="chip">Altium · 6-layer PCB</span>
       <span class="chip">MIPI CSI-2 · USB3 · PCIe</span>
-      <span class="chip">Lattice FPGA</span>
+      <span class="chip">STM32 · ROS2</span>
       <span class="chip">Embedded Linux · DTS</span>
     </div>
     <div class="hero-cta">
@@ -190,10 +190,10 @@
     </div>
     <div class="skill-card">
       <div class="skill-icon">🧩</div>
-      <div class="skill-title">FPGA Development</div>
-      <div class="skill-title-zh">FPGA 開發</div>
-      <div class="skill-desc">Lattice CrossLink-NX. MIPI CSI-2 bridge pipeline, USB3 UVC output, driver-free stereo camera output.</div>
-      <p class="zh">Lattice CrossLink-NX，設計雙路 MIPI CSI-2 橋接至 USB3 UVC 輸出，免驅動即插即用。</p>
+      <div class="skill-title">STM32 & ROS2</div>
+      <div class="skill-title-zh">微控制器與機器人作業系統</div>
+      <div class="skill-desc">STM32 microcontroller development (GPIO, UART, I2C, SPI, timers). ROS2 fundamentals — nodes, topics, services, and basic robot control pipeline.</div>
+      <p class="zh">STM32 微控制器開發（GPIO、UART、I2C、SPI、計時器），ROS2 基礎架構 — 節點、話題、服務與基本機器人控制流程。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🐧</div>
@@ -232,12 +232,11 @@
         <span class="project-badge">Featured</span>
         <div class="project-title">Stereo Vision Camera System</div>
         <div class="project-title-zh">雙目視覺相機系統</div>
-        <div class="project-desc">Dual MIPI camera rig for stereo computer vision. Custom mechanical enclosure with multiple latch and clamping mechanism iterations for long-term optical alignment stability. Hardware VSYNC synchronization via RK3588S PWM, FPGA-based frame processing, USB3 UVC output — designed as a driver-free integrated unit.</div>
-        <p class="zh">雙 MIPI 相機機構設計，迭代多種卡扣與夾持機構確保長時間光軸穩定。透過 RK3588S PWM 實現硬體 VSYNC 同步，搭配 FPGA 影像處理，USB3 UVC 輸出，免驅動整機設計。</p>
+        <div class="project-desc">Dual MIPI camera rig for stereo computer vision. Custom mechanical enclosure with multiple latch and clamping mechanism iterations for long-term optical alignment stability. Hardware VSYNC synchronization via RK3588S PWM and USB3 UVC output — designed as a driver-free integrated unit.</div>
+        <p class="zh">雙 MIPI 相機機構設計，迭代多種卡扣與夾持機構確保長時間光軸穩定。透過 RK3588S PWM 實現硬體 VSYNC 同步，USB3 UVC 輸出，免驅動整機設計。</p>
         <div class="project-tags">
           <span class="tag">SolidWorks</span>
           <span class="tag">RK3588S</span>
-          <span class="tag">Lattice CrossLink-NX</span>
           <span class="tag">MIPI CSI-2</span>
           <span class="tag">USB3 UVC</span>
           <span class="tag">Embedded Linux</span>
@@ -280,17 +279,20 @@
 
     <div class="project-card">
       <div>
-        <div class="project-title">Orange Pi CM5 Carrier Board</div>
-        <div class="project-title-zh">Orange Pi CM5 客製化載板</div>
-        <div class="project-desc">Carrier board consolidating dual USB-C functions (BQ25890 charging + FUSB302 PD) into a single UT12113 port. Bidirectional power switching with AO3401A × 2 back-to-back MOSFETs, SuperSpeed ESD protection, and I2C level shifting for touchscreen integration.</div>
-        <p class="zh">將 BQ25890 充電與 FUSB302 PD 整合至單一 USB-C 口，雙 AO3401A 背靠背 MOSFET 雙向切換，含 SuperSpeed ESD 保護與觸控屏 I2C 電平轉換。</p>
+        <div class="project-title">PCB Design Projects Collection</div>
+        <div class="project-title-zh">電路板設計作品集</div>
+        <div class="project-desc">A series of self-initiated PCB projects spanning microcontroller minimum systems, power electronics, and IoT devices — designed and fabricated from scratch as part of hands-on hardware learning. Includes FPGA dev board, GD32F103 minimum system, LED matrix clock, multi-port PD docking station, ESP32-based voice control light, WiFi smart home controller, and screen monitor board.</div>
+        <p class="zh">一系列自主設計的電路板專案，涵蓋微控制器最小系統、電源電子與 IoT 裝置。包含 FPGA 開發板、GD32F103 最小系統、LED 點陣時鐘、多口 PD 擴充座、ESP32 語音控制燈、WiFi 智能家居控制器與螢幕監控板。</p>
         <div class="project-tags">
-          <span class="tag">BQ25890</span>
-          <span class="tag">FUSB302</span>
+          <span class="tag">EasyEDA</span>
+          <span class="tag">GD32F103</span>
+          <span class="tag">ESP32</span>
           <span class="tag">USB-C PD</span>
-          <span class="tag">RK3588S</span>
+          <span class="tag">FPGA</span>
+          <span class="tag">IoT</span>
         </div>
       </div>
+      <a class="project-link" href="https://github.com/samuel-chai/PCB-learning-record" target="_blank">GitHub ↗</a>
     </div>
 
     <div class="project-card">
@@ -329,10 +331,10 @@
         <ul class="exp-bullets">
           <li>Led mechanical architecture and mechanism design for stereo vision camera system</li>
           <li>Designed custom carrier boards for RK3588S and Intel N150 SoMs</li>
-          <li>Developed hardware VSYNC sync and FPGA-based UVC pipeline</li>
+          <li>Developed hardware VSYNC sync and USB3 UVC camera pipeline</li>
           <li>Full hardware bring-up and embedded Linux fault isolation</li>
         </ul>
-        <p class="zh">主導雙目相機系統機構設計、RK3588S 與 Intel N150 客製化載板開發、硬體 VSYNC 同步與 FPGA UVC 管線，獨立完成系統 bring-up 與嵌入式 Linux 故障排除。</p>
+        <p class="zh">主導雙目相機系統機構設計、RK3588S 與 Intel N150 客製化載板開發、硬體 VSYNC 同步與 USB3 UVC 相機管線，獨立完成系統 bring-up 與嵌入式 Linux 故障排除。</p>
       </div>
     </div>
 
