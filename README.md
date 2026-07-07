@@ -1,6 +1,6 @@
 # Hi, I'm Samuel 👋
 
-**Electromechanical Systems Engineer** based in Hong Kong.
+**Electromechanical Systems Engineer** based in Hong Kong / Taiwan.
 
 I build integrated hardware products where mechanical architecture and electronic subsystems are co-designed from the ground up — from SolidWorks CNC-ready structures to custom carrier boards, embedded Linux bring-up, and vision pipelines.
 
