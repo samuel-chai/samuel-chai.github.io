@@ -14,7 +14,6 @@
     --muted: #7b82a0;
     --accent: #5b7fff;
     --accent2: #38c9a4;
-    --accent3: #f59e42;
     --radius: 12px;
     --font: 'Inter', system-ui, sans-serif;
   }
@@ -23,7 +22,8 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  /* NAV */
+  .zh { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.7; opacity: 0.85; }
+
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(15,17,23,0.85); backdrop-filter: blur(12px);
@@ -36,7 +36,6 @@
   .nav-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); text-decoration: none; }
 
-  /* HERO */
   .hero {
     max-width: 860px; margin: 0 auto;
     padding: 100px 2rem 80px;
@@ -58,111 +57,69 @@
     border: 1px solid rgba(56,201,164,0.2);
     padding: 4px 12px; border-radius: 100px; margin-bottom: 1.5rem;
   }
-  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.2rem; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1rem; }
   .hero h1 span { color: var(--accent); }
-  .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 580px; margin-bottom: 2rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 580px; margin-bottom: 0.5rem; }
+  .hero-sub-zh { font-size: 13px; color: var(--muted); opacity: 0.75; margin-bottom: 2rem; max-width: 580px; }
   .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2.5rem; }
-  .chip {
-    font-size: 13px; padding: 5px 14px; border-radius: 100px;
-    border: 1px solid var(--border); color: var(--muted); background: var(--surface);
-  }
+  .chip { font-size: 13px; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--border); color: var(--muted); background: var(--surface); }
   .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 8px; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #4a70ff; text-decoration: none; color: #fff; }
+  .btn-ghost { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.2); text-decoration: none; }
 
   @media (max-width: 600px) {
     .hero { grid-template-columns: 1fr; padding-top: 60px; gap: 2rem; }
     .hero-photo-wrap { order: -1; }
     .hero-photo { width: 100px; height: 100px; }
   }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 8px;
-    transition: all 0.2s; cursor: pointer; border: none;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: #4a70ff; text-decoration: none; color: #fff; }
-  .btn-ghost { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: rgba(255,255,255,0.2); text-decoration: none; }
 
-  /* SECTIONS */
   section { max-width: 860px; margin: 0 auto; padding: 64px 2rem; }
-  .section-label {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 0.5rem;
-  }
-  h2 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 2rem; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  h2 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+  .h2-zh { font-size: 14px; color: var(--muted); margin-bottom: 2rem; opacity: 0.8; }
   .divider { border: none; border-top: 1px solid var(--border); max-width: 860px; margin: 0 auto; }
 
-  /* SKILLS GRID */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .skill-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.25rem;
-    transition: border-color 0.2s;
-  }
+  .skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.2s; }
   .skill-card:hover { border-color: rgba(255,255,255,0.15); }
   .skill-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
-  .skill-title { font-size: 14px; font-weight: 600; margin-bottom: 0.5rem; }
-  .skill-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .skill-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .skill-title-zh { font-size: 12px; color: var(--accent2); margin-bottom: 0.5rem; opacity: 0.85; }
+  .skill-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 4px; }
 
-  /* PROJECTS */
   .projects-grid { display: grid; gap: 16px; }
-  .project-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.5rem 1.75rem;
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 1rem; align-items: start;
-    transition: border-color 0.2s, background 0.2s;
-  }
+  .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 1.75rem; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; transition: border-color 0.2s, background 0.2s; }
   .project-card:hover { border-color: rgba(255,255,255,0.18); background: var(--surface2); }
   .project-card.featured { border-color: rgba(91,127,255,0.3); }
-  .project-badge {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); background: rgba(91,127,255,0.1);
-    border: 1px solid rgba(91,127,255,0.2);
-    padding: 3px 10px; border-radius: 100px; display: inline-block; margin-bottom: 0.6rem;
-  }
-  .project-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .project-desc { font-size: 14px; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tag {
-    font-size: 12px; padding: 3px 10px; border-radius: 6px;
-    background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border);
-  }
-  .project-link {
-    font-size: 13px; color: var(--accent); white-space: nowrap;
-    display: flex; align-items: center; gap: 4px; padding-top: 4px;
-  }
+  .project-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: rgba(91,127,255,0.1); border: 1px solid rgba(91,127,255,0.2); padding: 3px 10px; border-radius: 100px; display: inline-block; margin-bottom: 0.6rem; }
+  .project-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .project-title-zh { font-size: 12px; color: var(--accent2); margin-bottom: 0.5rem; opacity: 0.85; }
+  .project-desc { font-size: 14px; color: var(--muted); margin-bottom: 6px; line-height: 1.6; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; }
+  .tag { font-size: 12px; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
+  .project-link { font-size: 13px; color: var(--accent); white-space: nowrap; display: flex; align-items: center; gap: 4px; padding-top: 4px; }
 
-  /* EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 32px; }
   .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; }
   .exp-period { font-size: 13px; color: var(--muted); padding-top: 3px; }
   .exp-org { font-size: 13px; color: var(--accent2); font-weight: 500; margin-bottom: 0.3rem; }
-  .exp-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .exp-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .exp-title { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
+  .exp-title-zh { font-size: 12px; color: var(--muted); margin-bottom: 0.5rem; opacity: 0.8; }
   .exp-bullets { list-style: none; margin-top: 0.6rem; }
   .exp-bullets li { font-size: 13px; color: var(--muted); padding: 3px 0 3px 16px; position: relative; line-height: 1.6; }
   .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 
-  /* CONTACT */
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-  .contact-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1rem 1.25rem;
-    display: flex; align-items: center; gap: 12px;
-    transition: border-color 0.2s;
-  }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: flex; align-items: center; gap: 12px; transition: border-color 0.2s; }
   .contact-card:hover { border-color: rgba(255,255,255,0.18); text-decoration: none; }
   .contact-icon { font-size: 1.2rem; }
   .contact-label { font-size: 12px; color: var(--muted); }
   .contact-value { font-size: 14px; font-weight: 500; color: var(--text); }
 
-  /* FOOTER */
-  footer {
-    text-align: center; padding: 2rem;
-    font-size: 13px; color: var(--muted);
-    border-top: 1px solid var(--border);
-  }
+  footer { text-align: center; padding: 2rem; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
 
   @media (max-width: 600px) {
     .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
@@ -191,6 +148,7 @@
     <div class="hero-tag">Electromechanical Systems Engineer</div>
     <h1>Hardware that spans<br><span>mechanics & silicon</span></h1>
     <p class="hero-sub">I build integrated products where structural design, custom PCB hardware, and embedded Linux systems are co-designed from the ground up — based in Hong Kong.</p>
+    <p class="hero-sub-zh">機電系統工程師，專注於機械結構設計、客製化電路板開發與嵌入式 Linux 整合，將產品從概念設計一路做到成品驗證。</p>
     <div class="hero-chips">
       <span class="chip">SolidWorks · CNC · GD&T</span>
       <span class="chip">RK3588S · Intel N150 SoM</span>
@@ -205,7 +163,7 @@
     </div>
   </div>
   <div class="hero-photo-wrap">
-    <img class="hero-photo" src="photo.jpg" alt="Samuel Chai">
+    <img class="hero-photo" src="photo.jpeg" alt="Samuel Chai">
   </div>
 </div>
 
@@ -214,36 +172,49 @@
 <section id="skills">
   <p class="section-label">Capabilities</p>
   <h2>What I work on</h2>
+  <p class="h2-zh">核心技術能力</p>
   <div class="skills-grid">
     <div class="skill-card">
       <div class="skill-icon">⚙️</div>
       <div class="skill-title">Mechanical Design</div>
+      <div class="skill-title-zh">機械設計</div>
       <div class="skill-desc">SolidWorks CNC-ready design with GD&T, tolerance stack-up, and DFM. Mechanism synthesis — spring-latch clamping, gear/rack actuation, six-bar linkages.</div>
+      <p class="zh">SolidWorks 出圖至 CNC 加工，包含公差分析、DFM 設計、彈片卡扣機構與齒輪齒條等機構設計。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🔌</div>
       <div class="skill-title">PCB & Hardware Design</div>
+      <div class="skill-title-zh">電路板設計</div>
       <div class="skill-desc">Altium Designer / EasyEDA. 6-layer boards, high-speed routing (USB3, PCIe, MIPI CSI-2), power architecture, USB-C PD, LiHV battery management.</div>
+      <p class="zh">六層板設計、高速訊號走線（USB3、PCIe、MIPI），USB-C PD 議價、LiHV 電池管理系統。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🧩</div>
       <div class="skill-title">FPGA Development</div>
+      <div class="skill-title-zh">FPGA 開發</div>
       <div class="skill-desc">Lattice CrossLink-NX. MIPI CSI-2 bridge pipeline, USB3 UVC output, driver-free stereo camera output.</div>
+      <p class="zh">Lattice CrossLink-NX，設計雙路 MIPI CSI-2 橋接至 USB3 UVC 輸出，免驅動即插即用。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🐧</div>
       <div class="skill-title">Embedded Linux & Bring-up</div>
+      <div class="skill-title-zh">嵌入式 Linux 與系統除錯</div>
       <div class="skill-desc">Full hardware bring-up and fault isolation across power, I2C/PCIe bus, DTS overlay authoring, sysfs/GPIO/PWM control, kernel log analysis.</div>
+      <p class="zh">從上電到系統穩定運行的完整 bring-up 流程，DTS overlay 編寫、電源與匯流排故障隔離、核心日誌分析。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">📷</div>
       <div class="skill-title">Computer Vision & Sensing</div>
+      <div class="skill-title-zh">電腦視覺與感測</div>
       <div class="skill-desc">Stereo camera synchronization (hardware VSYNC), OpenCV, MediaPipe, YOLOv8 pose estimation, IMU calibration with Vicon ground truth.</div>
+      <p class="zh">硬體 VSYNC 雙目相機同步、人體姿態估計（YOLOv8、MediaPipe）、IMU 校準與 Vicon 動捕驗證。</p>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🔗</div>
       <div class="skill-title">System Integration</div>
+      <div class="skill-title-zh">系統整合</div>
       <div class="skill-desc">Co-designing mechanical enclosures around PCB spatial constraints, aligning optical assemblies to system-level tolerances, and validating complete product behavior across all domains.</div>
+      <p class="zh">機構外殼與電路板空間協同設計，光學模組對齊系統公差，跨機械、電子、韌體邊界的完整產品驗證。</p>
     </div>
   </div>
 </section>
@@ -253,13 +224,16 @@
 <section id="projects">
   <p class="section-label">Work</p>
   <h2>Featured projects</h2>
+  <p class="h2-zh">代表性專案</p>
   <div class="projects-grid">
 
     <div class="project-card featured">
       <div>
         <span class="project-badge">Featured</span>
         <div class="project-title">Stereo Vision Camera System</div>
+        <div class="project-title-zh">雙目視覺相機系統</div>
         <div class="project-desc">Dual MIPI camera rig for stereo computer vision. Custom mechanical enclosure with multiple latch and clamping mechanism iterations for long-term optical alignment stability. Hardware VSYNC synchronization via RK3588S PWM, FPGA-based frame processing, USB3 UVC output — designed as a driver-free integrated unit.</div>
+        <p class="zh">雙 MIPI 相機機構設計，迭代多種卡扣與夾持機構確保長時間光軸穩定。透過 RK3588S PWM 實現硬體 VSYNC 同步，搭配 FPGA 影像處理，USB3 UVC 輸出，免驅動整機設計。</p>
         <div class="project-tags">
           <span class="tag">SolidWorks</span>
           <span class="tag">RK3588S</span>
@@ -274,7 +248,9 @@
     <div class="project-card">
       <div>
         <div class="project-title">RK3588S Custom Carrier Board (LubanCat 5)</div>
+        <div class="project-title-zh">RK3588S 客製化載板（魯班貓 5）</div>
         <div class="project-desc">Full carrier board design for RK3588S SoM. Two-PCB architecture: power board with CN3722 LiHV 2S charger, MAX17044G fuel gauge, SOC LED indicator; carrier board with high-speed routing for USB3, PCIe, and MIPI CSI-2. Full bring-up fault isolation including I2C floating, PCIe CLKREQN kernel hang, and multi-rail sequencing failures.</div>
+        <p class="zh">雙板架構載板設計，含 CN3722 LiHV 充電、MAX17044G 電量計、多路電源時序。獨立排除 I2C 浮接、PCIe CLKREQN 核心掛起、Buck EN 雞蛋問題等 bring-up 故障。</p>
         <div class="project-tags">
           <span class="tag">Altium Designer</span>
           <span class="tag">RK3588S</span>
@@ -289,7 +265,9 @@
     <div class="project-card">
       <div>
         <div class="project-title">LattePanda Mu Carrier Board (Intel N150)</div>
+        <div class="project-title-zh">LattePanda Mu 客製化載板（Intel N150）</div>
         <div class="project-desc">Custom carrier board for Intel N150 SoM with USB-C PD negotiation via CH224K, SY8253ADC buck converter, TUSB1064 USB MUX, and FUSB302 CC detection. Debugged PD negotiation stuck at 9V (CFG resistors off by 1000×) and buck EN chicken-and-egg boot sequencing failure.</div>
+        <p class="zh">Intel N150 SoM 載板，USB-C PD 議價、TUSB1064 USB MUX。排查 CH224K CFG 電阻差 1000 倍導致 PD 卡 9V，以及 SY8253ADC EN 腳雞蛋問題。</p>
         <div class="project-tags">
           <span class="tag">EasyEDA</span>
           <span class="tag">Intel N150</span>
@@ -303,7 +281,9 @@
     <div class="project-card">
       <div>
         <div class="project-title">Orange Pi CM5 Carrier Board</div>
+        <div class="project-title-zh">Orange Pi CM5 客製化載板</div>
         <div class="project-desc">Carrier board consolidating dual USB-C functions (BQ25890 charging + FUSB302 PD) into a single UT12113 port. Bidirectional power switching with AO3401A × 2 back-to-back MOSFETs, SuperSpeed ESD protection, and I2C level shifting for touchscreen integration.</div>
+        <p class="zh">將 BQ25890 充電與 FUSB302 PD 整合至單一 USB-C 口，雙 AO3401A 背靠背 MOSFET 雙向切換，含 SuperSpeed ESD 保護與觸控屏 I2C 電平轉換。</p>
         <div class="project-tags">
           <span class="tag">BQ25890</span>
           <span class="tag">FUSB302</span>
@@ -316,7 +296,9 @@
     <div class="project-card">
       <div>
         <div class="project-title">Gymnastics Pose Detection</div>
+        <div class="project-title-zh">體操動作姿態偵測</div>
         <div class="project-desc">Human pose estimation pipeline for gymnastics movement analysis. Implemented YOLOv8 and OpenCV-based detection with 3D reconstruction for motion tracking applications. Research project at City University of Hong Kong.</div>
+        <p class="zh">體操動作分析的人體姿態估計系統，結合 YOLOv8 與 OpenCV 實現 3D 動作重建，香港城市大學研究專案。</p>
         <div class="project-tags">
           <span class="tag">Python</span>
           <span class="tag">YOLOv8</span>
@@ -335,6 +317,7 @@
 <section id="experience">
   <p class="section-label">Experience</p>
   <h2>Background</h2>
+  <p class="h2-zh">工作經歷</p>
   <div class="exp-list">
 
     <div class="exp-item">
@@ -342,12 +325,14 @@
       <div>
         <div class="exp-org">HKCRC</div>
         <div class="exp-title">Assistant Engineer / Research Assistant</div>
+        <div class="exp-title-zh">助理工程師 / 研究助理</div>
         <ul class="exp-bullets">
           <li>Led mechanical architecture and mechanism design for stereo vision camera system</li>
           <li>Designed custom carrier boards for RK3588S and Intel N150 SoMs</li>
           <li>Developed hardware VSYNC sync and FPGA-based UVC pipeline</li>
           <li>Full hardware bring-up and embedded Linux fault isolation</li>
         </ul>
+        <p class="zh">主導雙目相機系統機構設計、RK3588S 與 Intel N150 客製化載板開發、硬體 VSYNC 同步與 FPGA UVC 管線，獨立完成系統 bring-up 與嵌入式 Linux 故障排除。</p>
       </div>
     </div>
 
@@ -356,11 +341,13 @@
       <div>
         <div class="exp-org">City University of Hong Kong</div>
         <div class="exp-title">Research Assistant — Computer Vision & Sensing</div>
+        <div class="exp-title-zh">研究助理 — 電腦視覺與感測系統</div>
         <ul class="exp-bullets">
           <li>Wearable IMU sensor enclosure and custom PCB design</li>
           <li>Human pose estimation pipeline with OpenCV, MediaPipe, YOLOv8</li>
           <li>IMU calibration using Vicon motion capture as ground truth</li>
         </ul>
+        <p class="zh">可穿戴 IMU 感測器外殼與客製化 PCB 設計，開發人體姿態估計管線，以 Vicon 動捕系統作為 IMU 校準基準。</p>
       </div>
     </div>
 
@@ -369,11 +356,13 @@
       <div>
         <div class="exp-org">National Tsing Hua University</div>
         <div class="exp-title">Graduate Research — Mechanical Systems Design</div>
+        <div class="exp-title-zh">研究所專題 — 機械系統設計（國立清華大學）</div>
         <ul class="exp-bullets">
           <li>Designed and optimized six-bar self-locking linkage mechanism</li>
           <li>Developed C# kinematic simulation tool for trajectory analysis</li>
           <li>CNC-fabricated prototype and experimental validation</li>
         </ul>
+        <p class="zh">設計並優化六連桿自鎖機構，開發 C# 運動學模擬工具進行軌跡分析，並透過 CNC 加工製作原型進行實驗驗證。</p>
       </div>
     </div>
 
@@ -385,6 +374,7 @@
 <section id="contact">
   <p class="section-label">Contact</p>
   <h2>Get in touch</h2>
+  <p class="h2-zh">聯絡方式</p>
   <div class="contact-grid">
     <a class="contact-card" href="https://github.com/samuel-chai" target="_blank">
       <span class="contact-icon">🐙</span>
@@ -411,14 +401,14 @@
       <span class="contact-icon">📍</span>
       <div>
         <div class="contact-label">Location</div>
-        <div class="contact-value">Hong Kong</div>
+        <div class="contact-value">Hong Kong / Taiwan</div>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Samuel Chai · Electromechanical Systems Engineer · Hong Kong</p>
+  <p>Samuel Chai · Electromechanical Systems Engineer · Hong Kong / Taiwan</p>
 </footer>
 
 </body>
