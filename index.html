@@ -40,6 +40,16 @@
   .hero {
     max-width: 860px; margin: 0 auto;
     padding: 100px 2rem 80px;
+    display: grid; grid-template-columns: 1fr 180px;
+    gap: 3rem; align-items: center;
+  }
+  .hero-photo-wrap { display: flex; justify-content: center; }
+  .hero-photo {
+    width: 160px; height: 160px; border-radius: 50%;
+    object-fit: cover; object-position: center top;
+    border: 3px solid rgba(91,127,255,0.4);
+    box-shadow: 0 0 0 6px rgba(91,127,255,0.08);
+    display: block;
   }
   .hero-tag {
     display: inline-block; font-size: 12px; font-weight: 500;
@@ -57,6 +67,12 @@
     border: 1px solid var(--border); color: var(--muted); background: var(--surface);
   }
   .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; padding-top: 60px; gap: 2rem; }
+    .hero-photo-wrap { order: -1; }
+    .hero-photo { width: 100px; height: 100px; }
+  }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 8px;
@@ -171,20 +187,25 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-tag">Electromechanical Systems Engineer</div>
-  <h1>Hardware that spans<br><span>mechanics & silicon</span></h1>
-  <p class="hero-sub">I build integrated products where structural design, custom PCB hardware, and embedded Linux systems are co-designed from the ground up — based in Hong Kong.</p>
-  <div class="hero-chips">
-    <span class="chip">SolidWorks · CNC · GD&T</span>
-    <span class="chip">RK3588S · Intel N150 SoM</span>
-    <span class="chip">Altium · 6-layer PCB</span>
-    <span class="chip">MIPI CSI-2 · USB3 · PCIe</span>
-    <span class="chip">Lattice FPGA</span>
-    <span class="chip">Embedded Linux · DTS</span>
+  <div class="hero-content">
+    <div class="hero-tag">Electromechanical Systems Engineer</div>
+    <h1>Hardware that spans<br><span>mechanics & silicon</span></h1>
+    <p class="hero-sub">I build integrated products where structural design, custom PCB hardware, and embedded Linux systems are co-designed from the ground up — based in Hong Kong.</p>
+    <div class="hero-chips">
+      <span class="chip">SolidWorks · CNC · GD&T</span>
+      <span class="chip">RK3588S · Intel N150 SoM</span>
+      <span class="chip">Altium · 6-layer PCB</span>
+      <span class="chip">MIPI CSI-2 · USB3 · PCIe</span>
+      <span class="chip">Lattice FPGA</span>
+      <span class="chip">Embedded Linux · DTS</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects">View projects</a>
+      <a class="btn btn-ghost" href="https://github.com/samuel-chai" target="_blank">GitHub ↗</a>
+    </div>
   </div>
-  <div class="hero-cta">
-    <a class="btn btn-primary" href="#projects">View projects</a>
-    <a class="btn btn-ghost" href="https://github.com/samuel-chai" target="_blank">GitHub ↗</a>
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="photo.jpg" alt="Samuel Chai">
   </div>
 </div>
 
